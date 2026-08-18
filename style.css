@@ -1,1 +1,91 @@
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.screen {
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Retro Title Screen */
+#titleScreen h1 {
+  font-size: 2.5rem;
+  color: #4ef037;
+  text-shadow: 2px 2px #000;
+}
+
+#startBtn {
+  background: #4ef037;
+  color: #000;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#startBtn:hover {
+  background: #3bc729;
+}
+
+/* Game World */
+#gameWorld {
+  width: 600px;
+  height: 300px;
+  background-color: #222;
+  border: 4px solid #fff;
+  position: relative;
+  overflow: hidden;
+  /* You can add a pixel background image here later */
+}
+
+/* Character Sprites */
+#player {
+  width: 32px;
+  height: 48px;
+  background-color: #3b82f6; /* Blue square placeholder until you upload image */
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+}
+
+#jessica {
+  width: 32px;
+  height: 48px;
+  background-color: #ec4899; /* Pink square placeholder */
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+}
+
+/* Dialogue Box */
+#dialogueBox {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #fff;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+#controlsHint {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #888;
+}
