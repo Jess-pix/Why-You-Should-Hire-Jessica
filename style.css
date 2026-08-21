@@ -27,8 +27,8 @@ video {
 
 #startButton {
     position: fixed;
-    left: 40%;
-    top: 60%;
+    left: 30%;
+    top: 50%;
     width: 20%;
     height: 10%;
     opacity: 0.5;
