@@ -7,20 +7,17 @@
 
 <body>
 
-    <div id="gameContainer">
+    <video id="titleScreen" autoplay muted>
+        <source src="title-screen.mp4" type="video/mp4">
+    </video>
 
-        <video id="titleScreen" autoplay muted>
-            <source src="title-screen.mp4" type="video/mp4">
-        </video>
+    <button id="startButton" aria-label="Start"></button>
 
-        <button id="startButton" aria-label="Start"></button>
-
-        <video id="startTransition" muted>
-            <source src="start-transition.mp4" type="video/mp4">
-        </video>
-
-    </div>
+    <video id="startTransition" muted>
+        <source src="start-transition.mp4" type="video/mp4">
+    </video>
 
     <script src="script.js"></script>
+
 </body>
 </html>
