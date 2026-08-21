@@ -27,10 +27,10 @@ video {
 
 #startButton {
     position: fixed;
-    left: 30%;
-    top: 50%;
-    width: 20%;
-    height: 10%;
+    left: 75.15vw;
+    top: 25vw;
+    width: 22.4vw;
+    height: 11.57vh;
     opacity: 0.5;
     background: red;
     cursor: move;
