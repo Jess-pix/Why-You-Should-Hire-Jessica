@@ -35,15 +35,6 @@ video {
     background: red;
     cursor: move;
     z-index: 10;
-}
-
-#resizeHandle {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 15px;
-    height: 15px;
-    background: white;
-    cursor: nwse-resize;
-    z-index: 20;
+    resize: both;
+    overflow: auto;
 }
