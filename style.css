@@ -33,5 +33,6 @@ video {
     height: 10%;
     opacity: 0.5;
     background: red;
-    cursor: pointer;
+    cursor: move;
+    z-index: 10;
 }
