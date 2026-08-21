@@ -20,3 +20,7 @@ video {
     height: 100%;
     object-fit: contain;
 }
+
+#startTransition {
+    display: none;
+}
