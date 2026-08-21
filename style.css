@@ -24,3 +24,13 @@ video {
 #startTransition {
     display: none;
 }
+
+#startButton {
+    position: fixed;
+    left: 40%;
+    top: 60%;
+    width: 20%;
+    height: 10%;
+    opacity: 0;
+    cursor: pointer;
+}
