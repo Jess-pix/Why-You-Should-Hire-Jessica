@@ -9,28 +9,30 @@ setInterval(() => {
 
 const button = document.getElementById("startButton");
 
-let dragging = false;
-let offsetX = 0;
-let offsetY = 0;
+const titleScreen = document.getElementById("titleScreen");
 
-button.addEventListener("pointerdown", (event) => {
-    dragging = true;
+const videoReference = {
+    left: 84.73,
+    top: 24.63,
+    width: 30.53,
+    height: 11.57
+};
 
-    const rect = button.getBoundingClientRect();
+function positionStartButton() {
+    const videoRect = titleScreen.getBoundingClientRect();
 
-    offsetX = event.clientX - rect.left;
-    offsetY = event.clientY - rect.top;
+    button.style.left =
+        `${videoRect.left + (videoRect.width * videoReference.left / 100)}px`;
 
-    button.setPointerCapture(event.pointerId);
-});
+    button.style.top =
+        `${videoRect.top + (videoRect.height * videoReference.top / 100)}px`;
 
-button.addEventListener("pointermove", (event) => {
-    if (!dragging) return;
+    button.style.width =
+        `${videoRect.width * videoReference.width / 100}px`;
 
-    button.style.left = `${event.clientX - offsetX}px`;
-    button.style.top = `${event.clientY - offsetY}px`;
-});
+    button.style.height =
+        `${videoRect.height * videoReference.height / 100}px`;
+}
 
-button.addEventListener("pointerup", () => {
-    dragging = false;
-});
+positionStartButton();
+window.addEventListener("resize", positionStartButton);
