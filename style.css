@@ -17,18 +17,17 @@ body {
 
 #gameContainer {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: min(100vw, 129.2vh);
+    aspect-ratio: 2336 / 1808;
+    max-height: 100vh;
+    margin: auto;
     overflow: hidden;
 }
 
 video {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    display: block;
 }
 
 #startTransition {
@@ -37,14 +36,12 @@ video {
 
 #startButton {
     position: absolute;
-    left: 1155.9px;
-    top: 212.8px;
-    width: 341px;
-    height: 100px;
+    left: 84.72%;
+    top: 24.63%;
+    width: 30.56%;
+    height: 11.57%;
     opacity: 0.5;
     background: red;
     cursor: move;
     z-index: 10;
-    resize: both;
-    overflow: auto;
 }
