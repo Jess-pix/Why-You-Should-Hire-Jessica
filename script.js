@@ -1,8 +1,8 @@
 const video = document.querySelector("video");
 
-video.addEventListener("timeupdate", () => {
-    if (video.currentTime >= 10.9) {
+setInterval(() => {
+    if (video.currentTime >= 10.5) {
         video.currentTime = 1;
         video.play();
     }
-});
+}, 100);
