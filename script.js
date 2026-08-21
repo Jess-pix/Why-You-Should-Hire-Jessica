@@ -13,19 +13,24 @@ let dragging = false;
 let offsetX = 0;
 let offsetY = 0;
 
-button.addEventListener("mousedown", (event) => {
+button.addEventListener("pointerdown", (event) => {
     dragging = true;
-    offsetX = event.clientX - button.offsetLeft;
-    offsetY = event.clientY - button.offsetTop;
+
+    const rect = button.getBoundingClientRect();
+
+    offsetX = event.clientX - rect.left;
+    offsetY = event.clientY - rect.top;
+
+    button.setPointerCapture(event.pointerId);
 });
 
-document.addEventListener("mousemove", (event) => {
+button.addEventListener("pointermove", (event) => {
     if (!dragging) return;
 
     button.style.left = `${event.clientX - offsetX}px`;
     button.style.top = `${event.clientY - offsetY}px`;
 });
 
-document.addEventListener("mouseup", () => {
+button.addEventListener("pointerup", () => {
     dragging = false;
 });
