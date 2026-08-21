@@ -34,36 +34,3 @@ button.addEventListener("pointermove", (event) => {
 button.addEventListener("pointerup", () => {
     dragging = false;
 });
-
-const resizeHandle = document.createElement("div");
-resizeHandle.id = "resizeHandle";
-button.appendChild(resizeHandle);
-
-let resizing = false;
-
-resizeHandle.addEventListener("pointerdown", (event) => {
-    event.stopPropagation();
-    resizing = true;
-    resizeHandle.setPointerCapture(event.pointerId);
-});
-
-resizeHandle.addEventListener("pointermove", (event) => {
-    if (!resizing) return;
-
-    const rect = button.getBoundingClientRect();
-
-    const newWidth = event.clientX - rect.left;
-    const newHeight = event.clientY - rect.top;
-
-    if (newWidth > 30) {
-        button.style.width = `${newWidth}px`;
-    }
-
-    if (newHeight > 20) {
-        button.style.height = `${newHeight}px`;
-    }
-});
-
-resizeHandle.addEventListener("pointerup", () => {
-    resizing = false;
-});
